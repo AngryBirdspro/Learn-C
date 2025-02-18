@@ -1,0 +1,6 @@
+# Open, create, read, and write files
+## Basics
+It is possible to open, create, read, and write files with C by declaring a pointer type of **FILE** and using the "fopen()" function. "FILE" is a datatype, which _also requires a pointer_ to work with it. The fopen() function is needed to actually open the file which _requires 2 parameters_: the filename, and a single character from the choices of w (write to the file), a (append to the file), and r (read the file). It is possible to create a file with w mode used in fopen() because if the file doesn't exist, C will autocreate one. The "fclose()" function can also be used to close the file, although not needed, can ensure: the file saves properly, other programs can use it if needed, and can clear up unnessesary memory space.
+
+## Reading a file
+Reading a file takes many steps and a lot of work to achieve in C. The file must first be set into read mode, a string variable is needed to store the contents of the file using fgets() (a while loop can be used to _continuously read the file until all lines are read_), and lastly printed with printf() and then closing the file. A bonus if statement can be used to check if the file exists using the "NULL" keyword which is good practice.
