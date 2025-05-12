@@ -26,6 +26,7 @@ int main()
     printf("%lu\n", sizeof(y[1]));
     // Printing the size of y
     printf("%lu\n", sizeof(y));
+
     // Using a for loop to print out every element in the first array in y
     for (int i1 = 0; i1 < 2; i1++)
     {
@@ -42,6 +43,16 @@ int main()
             printf("%d\n", y[i3][i4]);
         }
     }
+
+    // Printing the first element of array "x" in integer translation of the hexadecimal value
+    printf("%d\n", x);
+    printf("%lu\n", x);
+    // Printing the first element of array "x" in character (string) translation of the hexadecimal value
+    printf("%c\n", x);
+    // Printing the first element of array "x" in default pointer (hexadecimal value) form
+    printf("%p\n", x);
+    // Printing the first element of array "x" in float translation of the hexadecimal value
+    printf("%f\n", x);
 
     return 0;
 }

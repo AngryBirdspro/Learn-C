@@ -4,12 +4,10 @@
 int main()
 {
     int *students;
-    int studentCount = 12;
-
-    students = calloc(studentCount, sizeof(*students));
-
-    // Printing the size of the allocated memory in bytes
-    printf("%lu\n", studentCount * sizeof(*students));
+    int numStudents = 12;
+    students = malloc(sizeof(*students));
+    printf("%lu\n", numStudents * sizeof(*students));
+    printf("%lu", sizeof(*students));
 
     return 0;
 }
