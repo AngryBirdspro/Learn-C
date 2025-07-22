@@ -56,3 +56,13 @@ int main()
 
 ## Reallocate memory
 Memory can be *reallocated* if the amount is too much or too little. When reallocating memory, a different (usually larger) amount of memory is reserved while keeping the data stored in it. The **realloc()** function can be used to do this which takes 2 parameters – realloc(*ptr1*, *size*). realloc() will attempt to resize the memory at ptr 1 and return the same memory address, if it cannot resize the memory at the current address it will allocate the memory to a different address and return that address instead. When realloc() returns a different memory address, the memory at the original address is no longer safe to use. When reallocation is done, it is good to asign a new pointer to the previous variable so that the old pointer cannot be accidentally used. In the unlikely case of memory reallocation failing which causes realloc() to return a **null pointer**, it is a good idea to have the program to be failproof.
+
+## Deallocate (free) memory
+When allocated memory is no longer needed, it is good practice to deallocate, or free it. [Dynamic memory](#dynamic-memory) stays reserved until it is deallocated or when the program ends. Once the memory is deallocated, it can be used by other programs or even allocated to another part of the user's program. The **free()** function can be used to deallocate memory.
+```c
+int *ptr;
+ptr = malloc(sizeof(*ptr));
+free(ptr);
+ptr = NULL;
+```
+It is good practice to set a pointer to null after freeing the memory to ensure it cannot be accidentally used later on which can cause corruption in the program or other programs.
