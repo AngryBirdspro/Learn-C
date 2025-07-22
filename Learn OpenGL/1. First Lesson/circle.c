@@ -51,14 +51,14 @@ int main(void)
 
     if (!glfwInit()) {
         fprintf(stderr, "Failed to initialize GLFW\n");
-        return -1;
+        return 1;
     }
 
     GLFWwindow* window = glfwCreateWindow(windowWidth, windowHeight, "Resizable Circle", NULL, NULL);
     if (!window) {
         fprintf(stderr, "Failed to create GLFW window\n");
         glfwTerminate();
-        return -1;
+        return 1;
     }
 
     glfwMakeContextCurrent(window);
